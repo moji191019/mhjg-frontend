@@ -10,6 +10,11 @@ section {
 }
 .inputSection {
   margin-top: 40px;
+  flex-direction: column;
+  & > div {
+    display: flex;
+    gap: 2rem;
+  }
 }
 
 .App-logo {

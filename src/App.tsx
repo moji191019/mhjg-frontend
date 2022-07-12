@@ -5,11 +5,11 @@ import BaseButton from './components/baseComp/BaseButton';
 import BaseInput from './components/baseComp/BaseInput';
 
 const App = () => {
-  const handleButtonClick: React.MouseEventHandler<HTMLButtonElement> = (event) => {
+  const handleButtonClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     console.log('handleButtonClick', event.target);
   };
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    console.log(event.target.value);
+    console.log('handleInputChange', event.target.value);
   };
   return (
     <div className="App">
@@ -25,14 +25,20 @@ const App = () => {
           </ButtonGroup>
         </section>
         <section className={styles.inputSection}>
-          <BaseInput label="filled 인풋" defaultValue=" 기본값" variant="filled"></BaseInput>
-          <BaseInput label="outlined 인풋" defaultValue="" variant="outlined"></BaseInput>
-          <BaseInput label="standard 인풋" defaultValue="" variant="standard"></BaseInput>
-          <BaseInput label="helperText 인풋" helperText="도움말같은거 적는 곳" variant="outlined"></BaseInput>
-          <BaseInput label="small 인풋" size="small" variant="outlined"></BaseInput>
-          <BaseInput label="normal 인풋" size="medium" variant="outlined"></BaseInput>
-          <BaseInput label="controlled 인풋" onChangeHandler={handleInputChange} variant="outlined"></BaseInput>
-          <BaseInput label="uncontrolled 인풋" variant="outlined"></BaseInput>
+          <div>
+            <BaseInput label="filled 인풋" defaultValue=" 기본값" variant="filled"></BaseInput>
+            <BaseInput label="outlined 인풋" defaultValue="" variant="outlined"></BaseInput>
+            <BaseInput label="standard 인풋" defaultValue="" variant="standard"></BaseInput>
+            <BaseInput label="helperText 인풋" helperText="도움말같은거 적는 곳" variant="outlined"></BaseInput>
+          </div>
+          <div>
+            <BaseInput label="small 인풋" size="small" variant="outlined"></BaseInput>
+            <BaseInput label="normal 인풋" size="medium" variant="outlined"></BaseInput>
+          </div>
+          <div>
+            <BaseInput label="controlled 인풋" onChangeHandler={handleInputChange} variant="outlined"></BaseInput>
+            <BaseInput label="uncontrolled 인풋" variant="outlined"></BaseInput>
+          </div>
         </section>
       </main>
     </div>

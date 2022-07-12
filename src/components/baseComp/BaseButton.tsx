@@ -7,7 +7,7 @@ type BaseButtonProps = {
   text: string;
   variant?: 'text' | 'outlined' | 'contained' | undefined;
   size?: 'small' | 'medium' | 'large';
-  onClickHandler?: React.MouseEventHandler<HTMLButtonElement> | undefined;
+  onClickHandler?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 };
 
 const BaseButton = ({ ...props }: BaseButtonProps) => {
