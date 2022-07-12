@@ -2,6 +2,16 @@
   text-align: center;
 }
 
+section {
+  display: flex;
+  gap: 2rem;
+}
+.buttonSection {
+}
+.inputSection {
+  margin-top: 40px;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
