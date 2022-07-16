@@ -3,6 +3,7 @@ import { Box, ButtonGroup } from '@mui/material';
 import styles from './App.module.scss';
 import BaseButton from './components/baseComp/BaseButton';
 import BaseInput from './components/baseComp/BaseInput';
+import Header from './header/Header';
 
 const App = () => {
   const handleButtonClick = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -13,6 +14,7 @@ const App = () => {
   };
   return (
     <div className="App">
+      <Header />
       <main>
         <section className={styles.buttonSection}>
           <BaseButton text="contained 버튼" variant="contained" onClickHandler={handleButtonClick} />
