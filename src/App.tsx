@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ButtonGroup } from '@mui/material';
+import { Box, ButtonGroup } from '@mui/material';
 import styles from './App.module.scss';
 import BaseButton from './components/baseComp/BaseButton';
 import BaseInput from './components/baseComp/BaseInput';
@@ -25,20 +25,20 @@ const App = () => {
           </ButtonGroup>
         </section>
         <section className={styles.inputSection}>
-          <div>
+          <Box>
             <BaseInput label="filled 인풋" defaultValue=" 기본값" variant="filled"></BaseInput>
             <BaseInput label="outlined 인풋" defaultValue="" variant="outlined"></BaseInput>
             <BaseInput label="standard 인풋" defaultValue="" variant="standard"></BaseInput>
             <BaseInput label="helperText 인풋" helperText="도움말같은거 적는 곳" variant="outlined"></BaseInput>
-          </div>
-          <div>
+          </Box>
+          <Box>
             <BaseInput label="small 인풋" size="small" variant="outlined"></BaseInput>
             <BaseInput label="normal 인풋" size="medium" variant="outlined"></BaseInput>
-          </div>
-          <div>
+          </Box>
+          <Box>
             <BaseInput label="controlled 인풋" onChangeHandler={handleInputChange} variant="outlined"></BaseInput>
             <BaseInput label="uncontrolled 인풋" variant="outlined"></BaseInput>
-          </div>
+          </Box>
         </section>
       </main>
     </div>
