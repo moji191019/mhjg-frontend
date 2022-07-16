@@ -25,7 +25,6 @@ type BaseTextFieldProps = {
  */
 const BaseInput = ({ ...props }: BaseTextFieldProps) => {
   const { label, variant, defaultValue, helperText, size, onChangeHandler, inputProps, sx } = props;
-  console.log(sx);
   return (
     <TextField
       size={size}
@@ -35,7 +34,7 @@ const BaseInput = ({ ...props }: BaseTextFieldProps) => {
       helperText={helperText}
       onChange={onChangeHandler}
       InputProps={inputProps}
-      sx={{ flexGrow: 1 }}
+      sx={sx}
     />
   );
 };
