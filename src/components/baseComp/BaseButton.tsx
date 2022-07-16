@@ -10,6 +10,12 @@ type BaseButtonProps = {
   onClickHandler?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 };
 
+/**
+ * @param text 버튼에 표시될 문구
+ * @param variant 버튼 스타일
+ * @param size 버튼 사이즈
+ * @param onClickHandler 버튼 onClick 콜백함수
+ */
 const BaseButton = ({ ...props }: BaseButtonProps) => {
   const { text, variant, size, onClickHandler } = props;
   {

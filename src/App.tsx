@@ -4,6 +4,7 @@ import styles from './App.module.scss';
 import BaseButton from './components/baseComp/BaseButton';
 import BaseInput from './components/baseComp/BaseInput';
 import Header from './header/Header';
+import SearchBox from './search/SearchBox';
 
 const App = () => {
   const handleButtonClick = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -16,6 +17,7 @@ const App = () => {
     <div className="App">
       <Header />
       <main>
+        <SearchBox></SearchBox>
         <section className={styles.buttonSection}>
           <BaseButton text="contained 버튼" variant="contained" onClickHandler={handleButtonClick} />
           <BaseButton text="outelined 버튼" variant="outlined" onClickHandler={handleButtonClick} />
