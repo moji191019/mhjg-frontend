@@ -5,7 +5,8 @@ import styles from './App.module.scss';
 import BaseButton from './components/baseComp/BaseButton';
 import BaseInput from './components/baseComp/BaseInput';
 import Header from './header/Header';
-import SearchBox from './search/SearchBox';
+import Home from './pages/Home';
+import Login from './pages/Login';
 
 const ComponentSample = () => {
   const handleButtonClick = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -52,9 +53,10 @@ const App = () => {
       <Header />
       <Container component="main">
         <Routes>
-          <Route path="/" element={<SearchBox />} />
-          <Route path="home" element={<SearchBox />} />
+          <Route path="/" element={<Home />} />
+          <Route path="home" element={<Home />} />
           <Route path="sample" element={<ComponentSample />} />
+          <Route path="login" element={<Login />} />
         </Routes>
       </Container>
     </BrowserRouter>
