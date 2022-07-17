@@ -1,6 +1,6 @@
 import { Box, Container, InputAdornment } from '@mui/material';
 import React from 'react';
-import BaseInput from '../components/baseComp/BaseInput';
+import BaseInput from '../baseComp/BaseInput';
 import SearchIcon from '@mui/icons-material/Search';
 
 const SearchBox = () => {

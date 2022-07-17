@@ -4,7 +4,7 @@ import { Box, ButtonGroup, Container } from '@mui/material';
 import styles from './App.module.scss';
 import BaseButton from './components/baseComp/BaseButton';
 import BaseInput from './components/baseComp/BaseInput';
-import Header from './header/Header';
+import Header from './components/header/Header';
 import Home from './pages/Home';
 import Login from './pages/Login';
 
