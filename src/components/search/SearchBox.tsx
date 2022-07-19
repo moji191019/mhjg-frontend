@@ -9,7 +9,7 @@ const SearchBox = () => {
       <Box sx={{ display: 'flex', height: '40vh', alignItems: 'center' }}>
         <BaseInput
           label={'검색어 입력'}
-          inputProps={{
+          InputProps={{
             endAdornment: (
               <InputAdornment position="start">
                 <SearchIcon />

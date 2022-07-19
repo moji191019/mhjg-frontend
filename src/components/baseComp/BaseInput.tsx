@@ -1,19 +1,9 @@
 import React from 'react';
-import { InputProps, TextField } from '@mui/material';
-import { SxProps } from '@mui/material/styles';
+import { TextField, TextFieldProps } from '@mui/material';
 /**
  * 참고: https://mui.com/material-ui/react-text-field/#basic-textfield
  */
-type BaseTextFieldProps = {
-  label: string;
-  variant?: 'standard' | 'outlined' | 'filled';
-  defaultValue?: string;
-  helperText?: string;
-  size?: 'small' | 'medium';
-  inputProps?: InputProps;
-  sx?: SxProps;
-  onChangeHandler?: (event: React.ChangeEvent<HTMLInputElement>) => void;
-};
+type BaseTextFieldProps = TextFieldProps;
 
 /**
  * @property label 라벨값
@@ -24,9 +14,9 @@ type BaseTextFieldProps = {
  * @property onChangeHandler 인풋 onChange 콜백함수
  */
 const BaseInput = ({ ...props }: BaseTextFieldProps) => {
-  const { label, variant, defaultValue, helperText, size, onChangeHandler, inputProps, sx } = props;
   return (
-    <TextField
+    <>
+      {/* <TextField
       size={size}
       label={label}
       defaultValue={defaultValue}
@@ -35,7 +25,10 @@ const BaseInput = ({ ...props }: BaseTextFieldProps) => {
       onChange={onChangeHandler}
       InputProps={inputProps}
       sx={sx}
-    />
+      fullWidth
+    /> */}
+      <TextField {...props} />
+    </>
   );
 };
 

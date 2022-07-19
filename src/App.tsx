@@ -18,13 +18,13 @@ const ComponentSample = () => {
   return (
     <>
       <section className={styles.buttonSection}>
-        <BaseButton text="contained 버튼" variant="contained" onClickHandler={handleButtonClick} />
-        <BaseButton text="outelined 버튼" variant="outlined" onClickHandler={handleButtonClick} />
-        <BaseButton text="text 버튼" variant="text" onClickHandler={handleButtonClick} />
+        <BaseButton text="contained 버튼" variant="contained" onClick={handleButtonClick} />
+        <BaseButton text="outelined 버튼" variant="outlined" onClick={handleButtonClick} />
+        <BaseButton text="text 버튼" variant="text" onClick={handleButtonClick} />
         <ButtonGroup>
-          <BaseButton text="ButtonGroup 버튼" variant="contained" onClickHandler={handleButtonClick} />
-          <BaseButton text="ButtonGroup 버튼" variant="outlined" onClickHandler={handleButtonClick} />
-          <BaseButton text="ButtonGroup 버튼" variant="text" onClickHandler={handleButtonClick} />
+          <BaseButton text="ButtonGroup 버튼" variant="contained" onClick={handleButtonClick} />
+          <BaseButton text="ButtonGroup 버튼" variant="outlined" onClick={handleButtonClick} />
+          <BaseButton text="ButtonGroup 버튼" variant="text" onClick={handleButtonClick} />
         </ButtonGroup>
       </section>
       <section className={styles.inputSection}>
@@ -39,7 +39,7 @@ const ComponentSample = () => {
           <BaseInput label="normal 인풋" size="medium" variant="outlined"></BaseInput>
         </Box>
         <Box>
-          <BaseInput label="controlled 인풋" onChangeHandler={handleInputChange} variant="outlined"></BaseInput>
+          <BaseInput label="controlled 인풋" onChange={handleInputChange} variant="outlined"></BaseInput>
           <BaseInput label="uncontrolled 인풋" variant="outlined"></BaseInput>
         </Box>
       </section>
@@ -51,7 +51,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <Header />
-      <Container component="main">
+      <Container component="main" sx={{ height: '90%' }}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="home" element={<Home />} />
