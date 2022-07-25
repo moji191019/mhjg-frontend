@@ -2,11 +2,13 @@ import { TypedUseSelectorHook, useSelector, useDispatch } from 'react-redux';
 import { combineReducers, configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
 import { createLogger } from 'redux-logger';
 import loginSlice from '../slices/loginSlice';
+import joinSlice from '../slices/joinSlice';
 
 const logger = createLogger();
 
 const rootReducer = combineReducers({
   loginData: loginSlice.reducer,
+  joinData: joinSlice.reducer,
 });
 
 const store = configureStore({
