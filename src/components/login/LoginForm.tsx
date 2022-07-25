@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 import BaseButton from '../baseComp/BaseButton';
 import BaseInput from '../baseComp/BaseInput';
 import { login } from '../../store/api';
-import { useAppSelector, useAppDispatch } from '../../store/config';
-import { setLoginData } from '../../store/slices/loginSlice';
+import { useAppSelector, useAppDispatch } from '../../sample/store/config';
+import { setLoginData } from '../../sample/store/slices/loginSlice';
 
 const LoginForm = () => {
   const [formData, setFormData] = useState({ email: 'a@b.c', password: 'aa' });
