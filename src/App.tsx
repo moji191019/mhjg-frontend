@@ -7,6 +7,7 @@ import BaseInput from './components/baseComp/BaseInput';
 import Header from './components/header/Header';
 import Home from './pages/Home';
 import Login from './pages/Login';
+import Join from './pages/Join';
 
 const ComponentSample = () => {
   const handleButtonClick = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -56,6 +57,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="sample" element={<ComponentSample />} />
           <Route path="login" element={<Login />} />
+          <Route path="join" element={<Join />} />
         </Routes>
       </Container>
     </BrowserRouter>
