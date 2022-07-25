@@ -15,9 +15,10 @@ interface LoginResponse {
   password: string;
 }
 
-export const login = async (formData: LoginRequest) => {
-  console.log('login', formData);
+export const login = async (loginData: LoginRequest) => {
+  console.log('login', loginData);
   const response = await client.get<LoginResponse>('/user/kim');
   // const response = await fetch('http://localhost:8081/user/kim');
   console.log('login res', response);
+  return response;
 };

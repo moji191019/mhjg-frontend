@@ -54,7 +54,6 @@ const App = () => {
       <Container component="main" sx={{ height: '90%' }}>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="home" element={<Home />} />
           <Route path="sample" element={<ComponentSample />} />
           <Route path="login" element={<Login />} />
         </Routes>
