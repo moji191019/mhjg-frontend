@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { ThemeProvider, createTheme } from '@mui/material';
 import store from './sample/store/config';
 import './index.css';
 import App from './App';
@@ -8,10 +9,18 @@ import { Provider } from 'react-redux';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 
+const theme = createTheme({
+  typography: {
+    fontFamily: ['Noto Sans KR', 'Roboto', 'Arial', 'sans-serif'].join(','),
+  },
+});
+
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+      <ThemeProvider theme={theme}>
+        <App />
+      </ThemeProvider>
     </Provider>
   </React.StrictMode>,
 );
